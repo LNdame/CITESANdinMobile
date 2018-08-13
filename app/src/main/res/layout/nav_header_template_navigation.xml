@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/cardview_default_radius">
+
+    <ImageView
+        android:id="@+id/imgNavProfile"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:contentDescription="@string/nav_header_desc"
+        android:padding="@dimen/activity_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_profile" />
+
+    <TextView
+        android:id="@+id/txtNavUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/cardview_default_radius"
+        android:text="@string/placeholder_username"
+        android:textColor="@color/abcDark"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtNavFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/cardview_default_radius"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/cardview_default_radius"
+        android:text="@string/placeholder_full_name"
+        android:textColor="@color/abcDark" />
+</LinearLayout>

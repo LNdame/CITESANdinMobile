@@ -1,0 +1,47 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    android:iconTint="@color/colorPrimaryDark"
+    tools:targetApi="o">
+
+    <group
+        android:id="@+id/grpPrimary"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_notification"
+            android:title="@string/notifications"/>
+        <item
+            android:id="@+id/nav_fault_log"
+            android:icon="@drawable/ic_add"
+            android:title="@string/logFault"/>
+        <item
+            android:id="@+id/nav_faults_all"
+            android:icon="@drawable/ic_fault"
+            android:title="@string/yourFaults"/>
+    </group>
+
+    <group
+        android:id="@+id/grpMeta"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about"
+            android:title="@string/about"/>
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_contact"
+            android:title="@string/contact"/>
+    </group>
+
+    <group
+        android:id="@+id/grpLogout"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_notification"
+            android:title="@string/logout"/>
+    </group>
+</menu>

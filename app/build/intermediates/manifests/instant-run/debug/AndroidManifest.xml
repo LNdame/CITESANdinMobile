@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.batsamayi.ndincedetu"
+    android:versionCode="3"
+    android:versionName="0.9.4" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="27" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Access database -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Get images -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Get location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.batsamayi.ndincedetu.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.batsamayi.ndincedetu.permission.C2D_MESSAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:fullBackupContent="@xml/backup_descriptor"
+        android:icon="@drawable/ic_logo_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_logo_launcher"
+        android:screenOrientation="portrait"
+        android:supportsRtl="false"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.batsamayi.ndincedetu.Splash"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.batsamayi.ndincedetu.Activity_NoDrawer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.batsamayi.ndincedetu.Template_Navigation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.batsamayi.ndincedetu.UserLogin"
+            android:label="@string/action_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.batsamayi.ndincedetu.UserRegister"
+            android:label="@string/action_register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.batsamayi.ndincedetu.ForgotPassword"
+            android:label="@string/action_reset_password" />
+        <activity
+            android:name="com.batsamayi.ndincedetu.About"
+            android:label="@string/about"
+            android:screenOrientation="portrait"
+            android:theme="@style/TiledTheme" />
+        <activity
+            android:name="com.batsamayi.ndincedetu.Contact"
+            android:label="@string/contact"
+            android:screenOrientation="portrait"
+            android:theme="@style/TiledTheme" />
+
+        <provider
+            android:name="com.batsamayi.ndincedetu.GenericFileProvider"
+            android:authorities="@string/package_name"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <service android:name="com.batsamayi.ndincedetu.Service_Intance" >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.batsamayi.ndincedetu.Service_Notification"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!--
+             FirebaseMessagingService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" >
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" >
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.INSTALL_PACKAGES" >
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.batsamayi.ndincedetu" />
+            </intent-filter>
+        </receiver>
+        <!--
+             FirebaseInstanceIdService performs security checks at runtime,
+             no need for explicit permissions despite exported="true"
+        -->
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true" >
+            <intent-filter android:priority="-500" >
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:authorities="com.batsamayi.ndincedetu.firebaseinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="com.crashlytics.android.CrashlyticsInitProvider"
+            android:authorities="com.batsamayi.ndincedetu.crashlyticsinitprovider"
+            android:exported="false"
+            android:initOrder="100" />
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="com.batsamayi.ndincedetu.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,4 @@
+#Mon Aug 13 11:02:49 SAST 2018
+base.0=/Users/loicstephan/AndroidStudioProjects/NdincedeTuMobile/app/build/intermediates/transforms/dexMerger/debug/41
+path.0=classes.dex
+renamed.0=classes.dex

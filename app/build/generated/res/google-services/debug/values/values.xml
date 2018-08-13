@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">826515574082-fc59ngm0ll25u80rl4ksab13tr76lad6.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://ndincedetu.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">826515574082</string>
+    <string name="google_api_key" translatable="false">AIzaSyBY_b5GKI288vh1S4dWFMgbivPFCvmpSWM</string>
+    <string name="google_app_id" translatable="false">1:826515574082:android:de63180f95d917cc</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBY_b5GKI288vh1S4dWFMgbivPFCvmpSWM</string>
+    <string name="google_storage_bucket" translatable="false">ndincedetu.appspot.com</string>
+    <string name="project_id" translatable="false">ndincedetu</string>
+</resources>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    cardCornerRadius="@dimen/activity_margin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginLeft="@dimen/universal_padding"
+    android:layout_marginRight="@dimen/universal_padding"
+    android:layout_marginTop="4dp"
+    android:gravity="center"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/universal_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtNoImage"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:text="@string/label_no_image"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgFault"
+                    app:layout_constraintEnd_toEndOf="@+id/imgFault"
+                    app:layout_constraintStart_toStartOf="@+id/imgFault"
+                    app:layout_constraintTop_toTopOf="@+id/imgFault" />
+
+                <ProgressBar
+                    android:id="@+id/prgImage"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgFault"
+                    app:layout_constraintEnd_toEndOf="@+id/imgFault"
+                    app:layout_constraintStart_toStartOf="@+id/imgFault"
+                    app:layout_constraintTop_toTopOf="@+id/imgFault" />
+
+                <ImageView
+                    android:id="@+id/imgFault"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:contentDescription="@string/image_fault"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/vwPadding"
+                    app:layout_constraintStart_toEndOf="@+id/imgFault"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/txtRefNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/cardview_default_radius"
+                        android:paddingStart="@dimen/cardview_default_radius"
+                        android:text="@string/reference_number"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgStatus"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:tintMode="multiply"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_logo_launcher" />
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/cardview_default_radius"
+                        android:paddingStart="@dimen/cardview_default_radius"
+                        android:text="@string/item"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imgCategory"
+                        android:layout_width="15dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="@dimen/universal_padding"
+                        android:padding="@dimen/cardview_default_radius"
+                        android:tint="@color/colorPrimary"
+                        app:layout_constraintBottom_toTopOf="@+id/imgItem"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@android:drawable/ic_menu_sort_by_size" />
+
+                    <TextView
+                        android:id="@+id/txtCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cardview_default_radius"
+                        android:paddingLeft="@dimen/cardview_default_radius"
+                        android:text="Water &amp; Santitation"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgCategory"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgCategory"
+                        app:layout_constraintTop_toTopOf="@+id/imgCategory"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/imgItem"
+                        android:layout_width="15dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="@dimen/universal_padding"
+                        android:padding="@dimen/cardview_default_radius"
+                        android:paddingRight="@dimen/cardview_default_radius"
+                        android:tint="@color/colorPrimary"
+                        app:layout_constraintBottom_toTopOf="@+id/imgLocation"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@android:drawable/ic_menu_preferences" />
+
+                    <TextView
+                        android:id="@+id/txtItem"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cardview_default_radius"
+                        android:paddingLeft="@dimen/cardview_default_radius"
+                        android:text="Pipe"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgItem"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgItem"
+                        app:layout_constraintTop_toTopOf="@+id/imgItem"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/imgLocation"
+                        android:layout_width="15dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="@dimen/universal_padding"
+                        android:padding="@dimen/cardview_default_radius"
+                        android:tint="@color/colorPrimary"
+                        app:layout_constraintBottom_toTopOf="@+id/imgFloor"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@android:drawable/ic_dialog_map" />
+
+                    <TextView
+                        android:id="@+id/txtLocation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cardview_default_radius"
+                        android:paddingLeft="@dimen/cardview_default_radius"
+                        android:text="Building 1"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgLocation"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgLocation"
+                        app:layout_constraintTop_toTopOf="@+id/imgLocation"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/imgFloor"
+                        android:layout_width="15dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="@dimen/universal_padding"
+                        android:padding="@dimen/cardview_default_radius"
+                        android:tint="@color/colorPrimary"
+                        app:layout_constraintBottom_toTopOf="@+id/imgDate"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+                    <TextView
+                        android:id="@+id/txtFloor"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cardview_default_radius"
+                        android:paddingLeft="@dimen/cardview_default_radius"
+                        android:text="Floor 0"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgFloor"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgFloor"
+                        app:layout_constraintTop_toTopOf="@+id/imgFloor"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageView
+                        android:id="@+id/imgDate"
+                        android:layout_width="15dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="@dimen/universal_padding"
+                        android:padding="@dimen/cardview_default_radius"
+                        android:tint="@color/colorPrimary"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@android:drawable/ic_menu_today" />
+
+                    <TextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cardview_default_radius"
+                        android:paddingLeft="@dimen/cardview_default_radius"
+                        android:singleLine="false"
+                        android:text="20/04/2018"
+                        app:layout_constraintBottom_toBottomOf="@+id/imgDate"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgDate"
+                        app:layout_constraintTop_toTopOf="@+id/imgDate"
+                        tools:ignore="HardcodedText" />
+                </android.support.constraint.ConstraintLayout>
+
+                <View
+                    android:id="@+id/vwPadding"
+                    android:layout_width="1dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorAccent"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="@dimen/universal_padding"
+            android:background="@color/colorAccent" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description: The back lawn has flooded Description: The back lawn has flooded"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

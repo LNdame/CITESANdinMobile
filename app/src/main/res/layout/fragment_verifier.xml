@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@android:dimen/notification_large_icon_width"
+    tools:showIn="@layout/activity_forgot_password">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/universal_padding"
+        android:text="@string/alert_user_verify"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lblPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/universal_padding"
+        android:text="@string/prompt_enter_below"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtVerifyDigit0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/universal_padding"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/txtVerifyDigit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/universal_padding"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/txtVerifyDigit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/universal_padding"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/txtVerifyDigit3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/universal_padding"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bttVerify"
+        style="?android:textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:text="@string/action_verify"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtResend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:gravity="center_horizontal"
+        android:text="@string/action_resend_verification"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary" />
+</LinearLayout>

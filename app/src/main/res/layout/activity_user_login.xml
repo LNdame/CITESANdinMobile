@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserLogin">
+
+    <!-- UserLogin progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/frmUserLogin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@android:dimen/notification_large_icon_width"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.batsamayi.ndincedetu.EmailAddressView
+                android:id="@+id/txtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.batsamayi.ndincedetu.PasswordView
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:hint="@string/prompt_password"
+                android:imeActionId="6"
+                android:imeActionLabel="@string/action_login"
+                android:imeOptions="actionDone" />
+
+            <Button
+                android:id="@+id/bttLogin"
+                style="?android:textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:text="@string/action_login"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtNotRegistered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:gravity="center_horizontal"
+                android:text="@string/action_not_registered"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/txtForgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:gravity="center_horizontal"
+                android:text="@string/action_forgot_password"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

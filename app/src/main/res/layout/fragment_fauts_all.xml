@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FaultsAll">
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fltLogFault"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:tint="@color/colorBackground"/>
+
+    <!-- UserLogin progress -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/lytData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_no_faults"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/lytSwipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcyCard"
+                android:name=".CardFault"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="horizontal"
+                android:visibility="visible"
+                app:layoutManager="LinearLayoutManager"
+                tools:context=".FaultsAll"
+                tools:listitem="@layout/card_fault" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

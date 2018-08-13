@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "826515574082",
+    "firebase_url": "https://ndincedetu.firebaseio.com",
+    "project_id": "ndincedetu",
+    "storage_bucket": "ndincedetu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826515574082:android:de63180f95d917cc",
+        "android_client_info": {
+          "package_name": "com.batsamayi.ndincedetu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826515574082-mfbck69b9bf27fp829bges8do01n1ln9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.batsamayi.ndincedetu",
+            "certificate_hash": "6c30b0969e24a463416a80896b1881210ec6e125"
+          }
+        },
+        {
+          "client_id": "826515574082-fc59ngm0ll25u80rl4ksab13tr76lad6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY_b5GKI288vh1S4dWFMgbivPFCvmpSWM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826515574082-fc59ngm0ll25u80rl4ksab13tr76lad6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

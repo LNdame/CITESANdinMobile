@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.batsamayi.ndincedetu.UserLogin">
+
+    <ProgressBar
+        android:id="@+id/prgFaultLog"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/frmFaultLog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@android:dimen/notification_large_icon_width"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lblFaultCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/spnFaultCategory"
+                android:text="@string/label_fault_category" />
+
+            <Spinner
+                android:id="@+id/spnFaultCategory"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblFaultCategory" />
+
+            <TextView
+                android:id="@+id/lblFaultItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/universal_padding"
+                android:labelFor="@+id/spnFaultItem"
+                android:paddingTop="@dimen/universal_padding"
+                android:text="@string/label_fault_item"
+                app:layout_constraintTop_toBottomOf="@+id/spnFaultCategory" />
+
+            <Spinner
+                android:id="@+id/spnFaultItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblFaultItem" />
+
+            <TextView
+                android:id="@+id/lblFaultLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/universal_padding"
+                android:labelFor="@+id/spnFaultLocation"
+                android:paddingTop="@dimen/universal_padding"
+                android:text="@string/label_fault_location"
+                app:layout_constraintTop_toBottomOf="@+id/spnFaultItem" />
+
+            <Spinner
+                android:id="@+id/spnFaultLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLines="1"
+                android:singleLine="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/lytFloor"
+                app:layout_constraintTop_toBottomOf="@+id/lblFaultLocation" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lytFloor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/universal_padding"
+                android:paddingTop="@dimen/universal_padding"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spnFaultItem">
+
+                <EditText
+                    android:id="@+id/txtFloor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="3"
+                    android:hint="@string/label_floor"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:singleLine="true" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/lytDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lytFloor">
+
+                <EditText
+                    android:id="@+id/txtDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_description"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:maxLength="100"
+                    android:maxLines="5"
+                    android:singleLine="false" />
+
+                <TextView
+                    android:id="@+id/lblDescriptionLength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0/100"
+                    android:textAlignment="textEnd"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/lblUploadPicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_upload_picture"
+                app:layout_constraintTop_toBottomOf="@+id/lytDescription" />
+
+            <LinearLayout
+                android:id="@+id/lnrUploadPicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblUploadPicture">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="2"
+                    android:contentDescription="@string/label_upload_picture"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/ic_menu_camera"
+                    android:tint="@color/colorPrimaryDark" />
+
+                <TextView
+                    android:id="@+id/lblNoImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/error_no_image_selected" />
+
+                <ImageView
+                    android:id="@+id/imgFault"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+
+            <!-- Process Image progress -->
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lnrUploadPicture" />
+
+            <Button
+                android:id="@+id/bttLogFault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/action_log_fault"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lnrUploadPicture"
+                android:enabled="false"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

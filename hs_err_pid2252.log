@@ -1,0 +1,82 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/share/memory/arena.cpp:82), pid=2252, tid=952
+#
+# JRE version: Java(TM) SE Runtime Environment (10.0+46) (build 10+46)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (10+46, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dorg.gradle.appname=gradlew org.gradle.wrapper.GradleWrapperMain installDebug
+
+Host: Intel(R) Core(TM) i5-2520M CPU @ 2.50GHz, 4 cores, 3G,  Windows 10 , 64 bit Build 16299 (10.0.16299.431)
+Time: Thu Jun 14 23:00:16 2018 South Africa Standard Time elapsed time: 547 seconds (0d 0h 9m 7s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000196230ac800):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=952, stack(0x000000340f500000,0x000000340f600000)]
+
+
+Current CompileTask:
+C2: 547177 1991       4       org.gradle.internal.logging.console.WorkInProgressRenderer::renderNow (357 bytes)
+
+Stack: [0x000000340f500000,0x000000340f600000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x59fbf9]
+V  [jvm.dll+0x6bca11]
+V  [jvm.dll+0x6bdc06]
+V  [jvm.dll+0x6be293]
+V  [jvm.dll+0x234ba8]
+V  [jvm.dll+0xbbc2b]
+V  [jvm.dll+0xbba1a]
+V  [jvm.dll+0xbbedc]
+V  [jvm.dll+0x19f4a2]
+V  [jvm.dll+0x19cb9a]
+V  [jvm.dll+0x1a96ec]
+V  [jvm.dll+0x19c9df]
+V  [jvm.dll+0x10e788]
+V  [jvm.dll+0x10eb01]
+V  [jvm.dll+0x2a410b]
+V  [jvm.dll+0x2a5a2f]
+V  [jvm.dll+0x5be6d6]
+V  [jvm.dll+0x5b6dc4]
+V  [jvm.dll+0x5b6472]
+V  [jvm.dll+0x5b447b]
+V  [jvm.dll+0x17f37c]
+V  [jvm.dll+0x2a5ab5]
+V  [jvm.dll+0x5be6d6]
+V  [jvm.dll+0x5b6dc4]
+V  [jvm.dll+0x5b6472]
+V  [jvm.dll+0x5b447b]
+V  [jvm.dll+0x17f37c]
+V  [jvm.dll+0x2a5ab5]
+V  [jvm.dll+0x5be6d6]
+V  [jvm.dll+0x5b6dc4]
+V  [jvm.dll+0x5b6472]
+V  [jvm.dll+0x5b447b]
+V  [jvm.dll+0x17f37c]
+V  [jvm.dll+0x1fef7f]
+V  [jvm.dll+0x17caeb]
+V  [jvm.dll+0x20ca3d]
+V  [jvm.dll+0x20b806]
+V  [jvm.dll+0x68b42f]

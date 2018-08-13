@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="128dp"
+        android:layout_margin="@dimen/activity_margin"
+        android:paddingBottom="@dimen/activity_margin"
+        android:paddingTop="@dimen/activity_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo_launcher" />
+
+    <TextView
+        android:id="@+id/lblAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NdincedeTu!"
+        android:textColor="@color/colorBackground"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblCompanyInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingEnd="@android:dimen/notification_large_icon_height"
+        android:paddingStart="@android:dimen/notification_large_icon_height"
+        android:paddingTop="8dp"
+        android:text="This app was designed and developed under the auspices of CITE (pty) LTD in partnership with TBEE (pty) LTD"
+        android:textAlignment="center"
+        android:textSize="@dimen/activity_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblAppName" />
+
+    <ImageView
+        android:id="@+id/imgBCH"
+        android:layout_width="168dp"
+        android:layout_height="128dp"
+        android:padding="@dimen/activity_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblCompanyInfo"
+        app:srcCompat="@drawable/logo_tbee" />
+
+    <ImageView
+        android:id="@+id/imgCite"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:padding="@dimen/activity_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBCH"
+        app:srcCompat="@drawable/logo_cite" />
+</android.support.constraint.ConstraintLayout>

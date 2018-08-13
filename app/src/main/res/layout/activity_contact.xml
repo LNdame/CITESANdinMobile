@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Contact">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="128dp"
+            android:layout_margin="@dimen/activity_margin"
+            android:paddingBottom="@dimen/activity_margin"
+            android:paddingTop="@dimen/activity_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logo_launcher" />
+
+        <TextView
+            android:id="@+id/lblAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NdincedeTu!"
+            android:textColor="@color/colorBackground"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/activity_margin"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_margin">
+
+            <TextView
+                android:id="@+id/lblSupportInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_margin"
+                android:paddingRight="@dimen/activity_margin"
+                android:text="Support"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBackground"
+                android:textSize="@dimen/activity_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblSupport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_margin"
+                android:paddingRight="@dimen/activity_margin"
+                android:text="phumeza@citepro.co.za"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBackground"
+                android:textSize="@dimen/activity_margin"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/activity_margin"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_margin">
+
+            <TextView
+                android:id="@+id/lbHoursInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_margin"
+                android:paddingRight="@dimen/activity_margin"
+                android:text="Hours"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBackground"
+                android:textSize="@dimen/activity_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblhours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_margin"
+                android:paddingRight="@dimen/activity_margin"
+                android:text="09: 00 - 16: 00  -- Monday to Friday"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBackground"
+                android:textSize="@dimen/activity_margin"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/activity_margin"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_margin">
+
+            <TextView
+                android:id="@+id/lblGeneral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_margin"
+                android:paddingRight="@dimen/activity_margin"
+                android:text="General"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBackground"
+                android:textSize="@dimen/activity_margin"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblGeneralInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_margin"
+                android:paddingRight="@dimen/activity_margin"
+                android:text="Info@citesa.co.za / loicn@citesa.co.za"
+                android:textAlignment="textStart"
+                android:textColor="@color/colorBackground"
+                android:textSize="@dimen/activity_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

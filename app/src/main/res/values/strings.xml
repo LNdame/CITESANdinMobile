@@ -1,0 +1,103 @@
+<resources>
+    <string name="package_name">com.batsamayi.ndincedetu</string>
+    <string name="app_name">NdincedeTu!</string>
+    <string name="app_logo_blue">Ndincede Tu! Blue Logo</string>
+    <string name="prompt_email_address">Email address</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_confirm">Confirm Password</string>
+    <string name="action_login">Login</string>
+    <string name="action_register">Register</string>
+    <string name="action_change_credentials">Proceed</string>
+    <string name="action_verify">Verify</string>
+    <string name="action_resend_verification">Resend Verification Code</string>
+    <string name="action_already_registered">Already Registered?</string>
+    <string name="action_not_registered">Not Registered?</string>
+    <string name="action_forgot_password">Forgot Password?</string>
+    <string name="action_reset_password">Reset Password</string>
+    <string name="error_invalid_email">Please use a valid email address</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_match">Fields must match</string>
+    <string name="error_incorrect_password">Incorrect username or password</string>
+    <string name="error_incorrect_verifier">Verifier does not match. Please try again.</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_no_image_selected">No Image Selected</string>
+    <string name="alert_loading">Loading…</string>
+
+    <string name="prompt_category">Please select a category</string>
+    <string name="label_fault_category">Fault Category</string>
+    <string-array name="fault_categories">
+        <item>Electrical</item>
+        <item>Water &amp; Sanitation</item>
+        <item>Other</item>
+    </string-array>
+    <string name="prompt_item">Please select an item</string>
+    <string name="label_fault_item">Fault Item</string>
+    <string-array name="fault_item">
+        <item>Electricity issues</item>
+        <item>Lighting</item>
+        <item>Physical Damage</item>
+        <item>Other</item>
+    </string-array>
+    <string name="label_fault_location">Location</string>
+    <string-array name="fault_locations">
+        <item>Thuthuka Residence</item>
+        <item>Other Residence</item>
+        <item>Nkuhlu Building</item>
+        <item>Miriam Makeba Centre</item>
+        <item>Other</item>
+    </string-array>
+    <string name="prompt_description">Please describe the fault in detail…</string>
+    <string name="label_upload_picture">Upload Picture</string>
+    <string name="action_log_fault">Log Fault</string>
+    <string name="image_fault">picture of fault in question</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="placeholder_full_name">(Surname, First Name)</string>
+    <string name="placeholder_username">studentnumber@forthare.ac.za</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="label_no_notifications">You have no notifications</string>
+    <string name="loremipsum">lorem ipsum dolor sit amet.</string>
+
+    <string name="notifications">Notifications</string>
+    <string name="logFault">Log Fault</string>
+    <string name="yourFaults">Your Faults</string>
+    <string name="about">About</string>
+    <string name="contact">Contact</string>
+    <string name="logout">Sign Out</string>
+    <string name="ok">OK</string>
+
+    <!-- Strings related to login -->
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="prompt_login">\"Please log in\"</string>
+    <string name="label_name_first">First Name</string>
+    <string name="label_name_last">Last Name</string>
+    <string name="alert_user_verify">We have sent a 4-digit verification number to your email address to verify your identity.</string>
+    <string name="prompt_user_modify">Please provide your name, while you wait for the email to arrive!</string>
+    <string name="prompt_enter_below">Please enter it below.</string>
+    <string name="alert_user_modify">Name submitted successfully!</string>
+    <string name="label_no_faults">Could not find any faults logged by this account.</string>
+    <string name="label_no_new_faults">Could not find any new faults logged by this account.</string>
+    <string name="label_no_image">Image not found</string>
+    <string-array name="email_domains">
+        <item>ufh.ac.za</item>
+        <item>batsamayi.com</item>
+    </string-array>
+    <string name="action_submit">Submit</string>
+    <string name="action_proceed">Proceed</string>
+    <string name="action_change">Change</string>
+    <string name="error_not_found">Error: not found.</string>
+    <string name="error_location_not_found">Location not found.</string>
+    <string name="error_item_not_found">Item not found.</string>
+    <string name="error_category_not_found">Category not found.</string>
+    <string name="error_status_not_found">Status not found.</string>
+    <string name="label_floor">Floor</string>
+    <string name="action_settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="refresh">Refresh</string>
+    <string name="item">Item</string>
+    <string name="reference_number">RefNo</string>
+    <string name="category">Category</string>
+    <string name="default_notification_channel_id">0x0000000</string>
+    <string name="prompt_exit">Press Back again to exit</string>
+</resources>
